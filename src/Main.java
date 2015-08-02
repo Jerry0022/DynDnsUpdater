@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -41,10 +42,14 @@ public class Main
 			answer = in.readLine();
 			in.close();
 
+			String message;
 			if (answer != "status=200")
-				System.out.println("Everything worked fine. IP was updated with ip: " + publicIP);
+				message = "Everything worked fine. IP was updated with ip: " + publicIP;
 			else
-				System.out.println("Something went wrong, selfhost.de answers: " + answer);
+				message = "Something went wrong, selfhost.de answers: " + answer;
+
+			prop.setProperty("LastMessage", message);
+			prop.store(new FileOutputStream("config.properties"), null);
 		}
 		catch (IOException ex)
 		{
