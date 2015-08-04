@@ -5,5 +5,5 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 Loop {
 	RunWait, DynDNSUpdater.jar
-	Sleep, 10*60*1000 ; 10 minutes
+	Sleep, 60*1000 ; every 1 minutes
 }
