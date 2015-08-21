@@ -1,4 +1,4 @@
-# DynDnsUpdater
+# DynDnsUpdater for selfhost.de
 ##HowToUse
 - Install jre1.8 or later (if you have java installed, you probably have this already)
 - Copy DynDNSUpater.exe, DynDNSUpdater.jar and config.properties
